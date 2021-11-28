@@ -55,40 +55,40 @@ ans = 0
 # Horizontal
 for i in range(20):
     for j in range(17):
-        n1 = int(nstr[60*i+3*j]+nstr[60*i+3*j+1])
-        n2 = int(nstr[60*i+3*j+3]+nstr[60*i+3*j+4])
-        n3 = int(nstr[60*i+3*j+6]+nstr[60*i+3*j+7])
-        n4 = int(nstr[60*i+3*j+9]+nstr[60*i+3*j+10])
+        n1 = int(nstr[60*i+3*j:60*i+3*j+1])
+        n2 = int(nstr[60*i+3*j+3:60*i+3*j+4])
+        n3 = int(nstr[60*i+3*j+6:60*i+3*j+7])
+        n4 = int(nstr[60*i+3*j+9:60*i+3*j+10])
         prodct = n1*n2*n3*n4
         if ans<prodct: ans = prodct
 
 # Vertical
 for i in range(17):
     for j in range(20):
-        n1 = int(nstr[60*i+3*j]+nstr[60*i+3*j+1])
-        n2 = int(nstr[60*i+3*j+60]+nstr[60*i+3*j+61])
-        n3 = int(nstr[60*i+3*j+120]+nstr[60*i+3*j+121])
-        n4 = int(nstr[60*i+3*j+180]+nstr[60*i+3*j+181])
+        n1 = int(nstr[60*i+3*j:60*i+3*j+1])
+        n2 = int(nstr[60*i+3*j+60:60*i+3*j+61])
+        n3 = int(nstr[60*i+3*j+120:60*i+3*j+121])
+        n4 = int(nstr[60*i+3*j+180:60*i+3*j+181])
         prodct = n1*n2*n3*n4
         if ans<prodct: ans = prodct
 
 # \ Diagonal
 for i in range(17):
     for j in range(17):
-        n1 = int(nstr[60*i+3*j]+nstr[60*i+3*j+1])
-        n2 = int(nstr[60*i+3*j+63]+nstr[60*i+3*j+64])
-        n3 = int(nstr[60*i+3*j+126]+nstr[60*i+3*j+127])
-        n4 = int(nstr[60*i+3*j+189]+nstr[60*i+3*j+190])
+        n1 = int(nstr[60*i+3*j:60*i+3*j+1])
+        n2 = int(nstr[60*i+3*j+63:60*i+3*j+64])
+        n3 = int(nstr[60*i+3*j+126:60*i+3*j+127])
+        n4 = int(nstr[60*i+3*j+189:60*i+3*j+190])
         prodct = n1*n2*n3*n4
         if ans<prodct: ans = prodct
 
 # / Diagonal
 for i in range(17):
     for j in range(3,20):
-        n1 = int(nstr[60*i+3*j]+nstr[60*i+3*j+1])
-        n2 = int(nstr[60*i+3*j+57]+nstr[60*i+3*j+58])
-        n3 = int(nstr[60*i+3*j+114]+nstr[60*i+3*j+115])
-        n4 = int(nstr[60*i+3*j+171]+nstr[60*i+3*j+172])
+        n1 = int(nstr[60*i+3*j:60*i+3*j+1])
+        n2 = int(nstr[60*i+3*j+57:60*i+3*j+58])
+        n3 = int(nstr[60*i+3*j+114:60*i+3*j+115])
+        n4 = int(nstr[60*i+3*j+171:60*i+3*j+172])
         prodct = n1*n2*n3*n4
         if ans<prodct: ans = prodct
 
