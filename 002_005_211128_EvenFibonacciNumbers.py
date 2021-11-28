@@ -11,17 +11,16 @@ Answer: 4613732\n''')
 
 print('Method 1: Computational Brute Force')
 
-def fibncc(i):
-    if i==1: return 1
-    if i==2: return 2
-    return fibncc(i-1)+fibncc(i-2)
+def fibncc(n):
+    if n==1: return 1
+    if n==2: return 2
+    return fibncc(n-1)+fibncc(n-2)
 
-i = 2; ans = 0
-while True:
+ans = 0
+for i in range(2,int(4e6),3):
     f = fibncc(i)
-    if f>4000000: break
+    if f>4e6: break
     ans += f
-    i += 3
 
 print(ans, '\n')
 
@@ -31,13 +30,12 @@ print('Method 2: Computational Brute Force with Mathematical Simplification')
 fibncc2 = [2, 8]
 # fibncc2(n) = 4 * fibncc2(n-1) + fibncc2(n-2)
 
-n = 2; ans = 2+8
-while True:
-    f = 4 * fibncc2[n-1] + fibncc2[n-2]
+ans = 2+8
+for i in range(2,int(4e6)):
+    f = 4 * fibncc2[i-1] + fibncc2[i-2]
     if f>4000000: break
     fibncc2.append(f)
     ans += f
-    n += 1
 
 print(ans, '\n')
 
