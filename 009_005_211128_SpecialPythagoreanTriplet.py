@@ -13,17 +13,18 @@ import math
 
 print('''Mathematical thought process:
 Note: a < b < c
-Substitute a = 1,000-b-c into a^2 = c^2 - b^2, we get (after a series of algebraic manipulation)
+Substitute a = 1,000-b-c into a^2 = c^2 - b^2, we get (after a series of
+algebraic manipulation)
 b(b+c) - 1,000(b+c) + 500,000 = 0
-Let x = b, y = b + c, we get
-y * (1,000-x) = 500,000
-Because y=a+b and 1,000-x=a+c, y < 1,000-x, both between (500,1000)
+Let d = b + c, we get
+d * (1,000-b) = 500,000
+Because d=b+c and 1,000-b=a+c, we get 1,000-b < d, both between (500,1000)
 ''')
 
 n = 500000
-for y in range(501,int(math.sqrt(n))):
-    if n%y==0: continue
-    x = 1000 - n//y; b = x; c = y - x; a = 1000 - y
+for d in range(int(math.sqrt(n)),1000):
+    if n%d!=0: continue
+    a = 1000 - d; b = 1000 - n//d; c = d - b
     if a*a+b*b==c*c: break
 
 ans = a*b*c
