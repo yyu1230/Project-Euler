@@ -9,7 +9,7 @@ NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-
 two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters.
 The use of "and" when writing out numbers is in compliance with British usage.
 
-Answer: xxxx\n''')
+Answer: 21124\n''')
 
 cardnl = [3, 3, 5, 4, 4, 3, 5, 5, 4, 3, 6, 6, 8, 8, 7, 7, 9, 8, 8, 6, 6, 5, 5,
           5, 7, 6, 6, 7, 8]
