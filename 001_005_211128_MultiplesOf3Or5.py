@@ -10,9 +10,9 @@ Answer: 233168\n''')
 print('Method 1: Arithmetic')
 
 n = 1000
-num3 = (n-.999)//3
-num5 = (n-.999)//5
-num15 = (n-.999)//15
+num3 = (n-1)//3
+num5 = (n-1)//5
+num15 = (n-1)//15
 
 ans = int(3*num3*(num3+1)/2 + 5*num5*(num5+1)/2 - 15*num15*(num15+1)/2)
 print(ans, '\n')
@@ -22,7 +22,7 @@ print('Method 2: Computational Brute Force')
 
 ans = 0
 for i in range(1000):
-    if ((i+.001)//3*3==i) or ((i+.001)//5*5==i):
+    if (i%3==0) or (i%5==0):
         ans += i
 
 print(ans, '\n')
