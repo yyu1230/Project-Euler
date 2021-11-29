@@ -16,8 +16,8 @@ Answer: 837799\n''')
 
 def chanLength(n):
     if n==1: return 1
-    if n//2*2==n: return chanLength(n//2)+1
-    else: return chanLength(n*3+1)+1
+    if n%2: return chanLength(n*3+1)+1
+    else: return chanLength(n//2)+1
 
 ans = 0; clans = 0
 for i in range(1,int(1e6)):
