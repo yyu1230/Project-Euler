@@ -22,11 +22,8 @@ Because y=a+b and 1,000-x=a+c, y < 1,000-x, both between (500,1000)
 
 n = 500000
 for y in range(501,int(math.sqrt(n))):
-    if (n+.001)//y*y!=n: continue
-    x = 1000 - n//y
-    b = x
-    c = y - x
-    a = 1000 - y
+    if n%y==0: continue
+    x = 1000 - n//y; b = x; c = y - x; a = 1000 - y
     if a*a+b*b==c*c: break
 
 ans = a*b*c
