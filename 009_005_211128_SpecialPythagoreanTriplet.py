@@ -23,7 +23,7 @@ Because d=b+c and 1,000-b=a+c, we get 1,000-b < d, both between (500,1000)
 
 n = 500000
 for d in range(int(math.sqrt(n)),1000):
-    if n%d!=0: continue
+    if n%d: continue
     a = 1000 - d; b = 1000 - n//d; c = d - b
     if a*a+b*b==c*c: break
 
