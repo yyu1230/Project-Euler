@@ -13,7 +13,7 @@ import math
 # n >= 2
 def prim(n):
     for i in range(2,int(math.sqrt(n))+1):
-        if (n+.001)//i*i==n: return False
+        if n%i==0: return False
     return True
 
 n = 20; ans = 1
