@@ -11,7 +11,7 @@ import math
 # n >= 2
 def prim(n):
     for i in range(2,int(math.sqrt(n))+1):
-        if (n+.001)//i*i==n: return False
+        if n%2==0: return False
     return True
 
 n = 600851475143
@@ -20,7 +20,7 @@ for i in range(2,int(math.sqrt(n))+1):
     if prim(i): prims.append(i)
 
 for i in prims:
-    while (n+.001)//i*i==n:
+    while n%i==0:
         n /= i
         ans = i
     if i>n: break
