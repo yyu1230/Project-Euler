@@ -15,7 +15,7 @@ def ans():
             for k in range(9,-1,-1):
                 n = 100001*i + 10010*j + 1100*k
                 for l in range(100,int(math.sqrt(n))):
-                    r = (n+.001)//l
+                    r = n//l
                     if (r<1000) and (l*r==n):
                         return n
 
