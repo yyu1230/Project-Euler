@@ -23,6 +23,5 @@ for i in range(n):
     for j in names[i]: worth += ord(j)-64
     ans += worth*(i+1)
 
-
 print(ans, '\n')
 
